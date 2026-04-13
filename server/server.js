@@ -16,8 +16,10 @@ const connectDB = require('./config/db');
 // Middleware
 app.use(cors({
   origin: [
-    "http://localhost:5173"
-  ]
+    "http://localhost:5173",
+    "https://keep-notes-olive-seven.vercel.app"
+  ],
+ credentials: true,
 }));
 app.use(express.json());
 app.use("/api/users", authRoutes);
