@@ -6,6 +6,8 @@ const API = axios.create({
   baseURL: API_URL,
 });
 
+console.log("API_URL", API_URL);
+
 // Get all notes
 export const getNotes = async (token) => {
   const response = await API.get("/notes", {
